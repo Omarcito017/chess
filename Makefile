@@ -1,9 +1,9 @@
 install:
-	pip install -r requirements.txt
+    pip install -r requirements.txt
 
 test:
-	pytest
+    pytest
 
 lint:
-	black .
-	flake8
+    black .
+    flake8
