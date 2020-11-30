@@ -3,3 +3,6 @@ class Piece():
 
 class Pawn(Piece):
 	pass
+
+class Rook(Piece):
+	pass
