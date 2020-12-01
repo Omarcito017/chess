@@ -10,19 +10,19 @@ class Game():
     def initialize_white(self):
         #Initialize pawns
         for j in range(8):
-            self.board[6][j] = pieces.Pawn('b', 6, j)
+            self.board[6][j] = pieces.Pawn('w', 6, j)
         #Rooks
-        self.board[7][0] = pieces.Rook('b', 7, 0)
-        self.board[7][7] = pieces.Rook('b', 7, 7)
+        self.board[7][0] = pieces.Rook('w', 7, 0)
+        self.board[7][7] = pieces.Rook('w', 7, 7)
         #Knights
-        self.board[7][1] = pieces.Knight('b', 7, 1)
-        self.board[7][6] = pieces.Knight('b', 7, 6)
+        self.board[7][1] = pieces.Knight('w', 7, 1)
+        self.board[7][6] = pieces.Knight('w', 7, 6)
         #Bishops
-        self.board[7][2] = pieces.Bishop('b', 7, 2)
-        self.board[7][5] = pieces.Bishop('b', 7, 5)
+        self.board[7][2] = pieces.Bishop('w', 7, 2)
+        self.board[7][5] = pieces.Bishop('w', 7, 5)
         #Royalty
-        self.board[7][3] = pieces.Queen('b', 7, 3)
-        self.board[7][4] = pieces.King('b', 7, 4)
+        self.board[7][3] = pieces.Queen('w', 7, 3)
+        self.board[7][4] = pieces.King('w', 7, 4)
     
     def initialize_black(self):
         #Initialize pawns
@@ -40,6 +40,12 @@ class Game():
         #Royalty
         self.board[0][3] = pieces.Queen('b', 0, 3)
         self.board[0][4] = pieces.King('b', 0, 4)
+
+    def isInCheck(self) -> bool:
+        pass
+
+    def isCheckmate(self) -> bool:
+        pass
 
 
 
