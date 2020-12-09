@@ -1,5 +1,6 @@
+from color import Color
 class Piece:
-    def __init__(self, color: str, i: int, j: int):
+    def __init__(self, color: Color, i: int, j: int):
         self.color = color
         self.position = (i, j)
         self.firstMove = True
@@ -8,7 +9,6 @@ class Pawn(Piece):
     def valid_moves(self, board):
     
     def promote(self):
-
 
 class Rook(Piece):
     def valid_moves(self, board):
