@@ -1,26 +1,26 @@
 from color import Color
 class Piece:
-    def __init__(self, color: Color, i: int, j: int):
+    def __init__(self, color: Color, row: str, column: str):
         self.color = color
-        self.position = (i, j)
+        self.position = (row, column)
         self.firstMove = True
+    def valid_moves(self):
+        pass
 
 class Pawn(Piece):
-    def valid_moves(self, board):
-    
-    def promote(self):
+    pass
 
 class Rook(Piece):
-    def valid_moves(self, board):
+    pass
 
 class Knight(Piece):
-    def valid_moves(self, board):
+    pass
 
 class Bishop(Piece):
-    def valid_moves(self, board):
+    pass
 
 class Queen(Piece):
-    def valid_moves(self, board):
+    pass
 
 class King(Piece):
-    def valid_moves(self, board):
+    pass
