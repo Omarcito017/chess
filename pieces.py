@@ -1,7 +1,6 @@
 from color import Color
 from abc import ABC
 
-
 class Piece(ABC):
     def __init__(self, color: Color, row: str, column: str):
         self.color = color
