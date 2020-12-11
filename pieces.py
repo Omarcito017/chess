@@ -1,26 +1,43 @@
 from color import Color
-class Piece:
+from abc import ABC
+
+
+class Piece(ABC):
     def __init__(self, color: Color, row: str, column: str):
         self.color = color
         self.position = (row, column)
         self.firstMove = True
+
+    @abstractmethod
     def valid_moves(self):
         pass
 
+
 class Pawn(Piece):
-    pass
+    def valid_moves(self):
+        pass
+
 
 class Rook(Piece):
-    pass
+    def valid_moves(self):
+        pass
+
 
 class Knight(Piece):
-    pass
+    def valid_moves(self):
+        pass
+
 
 class Bishop(Piece):
-    pass
+    def valid_moves(self):
+        pass
+
 
 class Queen(Piece):
-    pass
+    def valid_moves(self):
+        pass
+
 
 class King(Piece):
-    pass
+    def valid_moves(self):
+        pass
