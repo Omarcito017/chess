@@ -7,6 +7,7 @@ class Piece(ABC):
         self.position = (row, column)
         self.firstMove = True
 
+    @abstractmethod
     def valid_moves(self):
         pass
 
