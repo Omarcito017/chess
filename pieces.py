@@ -7,7 +7,7 @@ class Piece:
     """Returns a list of valid coordinates for respective piece."""
         pass
     def inside_board(self, i: int, j: int) -> bool:
-        if square[0] < 8 and suare[1] < 8:
+        if square[0] < 8 and square[1] < 8:
             return True
         return False
 
