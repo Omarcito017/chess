@@ -41,12 +41,11 @@ class Game():
         self.board[0][3] = pieces.Queen('b', 0, 3)
         self.board[0][4] = pieces.King('b', 0, 4)
 
-    def isInCheck(self) -> bool:
+    def in_check(self) -> bool:
         pass
 
     def isCheckmate(self) -> bool:
         pass
-
 
 
 
