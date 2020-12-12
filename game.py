@@ -44,8 +44,7 @@ class Game():
     def in_check(self) -> bool:
         pass
 
-    def isCheckmate(self) -> bool:
+    def in_checkmate(self) -> bool:
         pass
-
 
 
