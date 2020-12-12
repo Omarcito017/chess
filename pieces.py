@@ -3,7 +3,8 @@ class Piece:
         self.color = color
         self.position = (i, j)
         self.firstMove = True
-    def valid_moves(self, board): #Returns a list of valid coordinates for respective piece
+    def valid_moves(self, board):
+    """Returns a list of valid coordinates for respective piece."""
         pass
     def inside_board(self, i: int, j: int) -> bool:
         if square[0] < 8 and suare[1] < 8:
