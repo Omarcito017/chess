@@ -10,9 +10,7 @@ class Piece:
         pass
 
     def inside_board(self, i: int, j: int) -> bool:
-        if i < 8 and j < 8:
-            return True
-        return False
+        return 0 < i < 8 and 0 < j < 8
 
 
 class Pawn(Piece):
