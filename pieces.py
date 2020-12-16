@@ -8,7 +8,7 @@ class Piece(ABC):
         self.position = (row, column)
         self.firstMove = True
 
-    def valid_moves(self):
+    def valid_moves(self, board):
         pass
 
 

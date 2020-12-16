@@ -1,7 +1,6 @@
 from board import Board
 from color import Color
 
-
 class Game:
     def __init__(self):
         self.board = Board()
