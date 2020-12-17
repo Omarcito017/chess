@@ -51,7 +51,7 @@ class Board:
 
     def coordinates_to_indeces(self, coord: str) -> tuple:
         i, j = int(coord[1]) - 1, self.columns[coord[0]]
-        return (i, j) 
+        return (i, j)
 
     def valid_moves(self, position: str) -> list:
         curr_piece = self[position]
