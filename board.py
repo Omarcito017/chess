@@ -51,14 +51,14 @@ class Board:
 
     def coordinates_to_indeces(self, coord: str) -> tuple:
         i, j = int(coord[1]) - 1, self.columns[coord[0]]
-        return (i, j)
+        return (i, j) 
 
-    def valid_moves(self, position: str) -> list(str):
+    def valid_moves(self, position: str) -> list:
         curr_piece = self[position]
         if isinstance(curr_piece, Pawn):
             return self.pawn_valid_moves(position, curr_piece)
 
-    def pawn_valid_moves(self, position: str, curr_piece: Piece) -> list[str]:
+    def pawn_valid_moves(self, position: str, curr_piece: Piece) -> list:
         def add(a, b):
             return a + b
 
