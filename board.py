@@ -53,11 +53,9 @@ class Board:
         i, j = int(coord[1]) - 1, self.columns[coord[0]]
         return (i, j)
 
-    def valid_moves(self, position: str) -> list[str]:
+    def valid_moves(self, position: str) -> list(str):
         curr_piece = self[position]
-        print("Good")
         if isinstance(curr_piece, Pawn):
-            print("Went inside")
             return self.pawn_valid_moves(position, curr_piece)
 
     def pawn_valid_moves(self, position: str, curr_piece: Piece) -> list[str]:
@@ -66,8 +64,6 @@ class Board:
 
         def sub(a, b):
             return a - b
-
-        print("got called")
         # Integer values to index the matrix
         i, j = self.coordinates_to_indeces(position)
         coordinates = []
