@@ -40,3 +40,8 @@ class Board:
         row = int(pos[1]) - 1
         column = self.columns[pos[0]]
         self.matrix[row][column] = item
+
+    def indeces_to_coordinates(self, i: int, j: int) -> str:
+        row = str(i + 1)
+        col = self.columns[j]
+        return col + row

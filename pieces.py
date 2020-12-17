@@ -9,7 +9,7 @@ class Piece(ABC):
         self.position = position
         self.firstMove = True
 
-    def valid_moves(self, board):
+    def valid_moves(self, board: Board):
         pass
 
     def inside_board(self, i: int, j: int):
@@ -18,7 +18,33 @@ class Piece(ABC):
 
 class Pawn(Piece):
     def valid_moves(self, board: Board):
-        pass
+        def add(a, b):
+            return a + b
+
+        def sub(a, b):
+            return a - b
+
+        # Integer values to index the matrix
+        i, j = board.coordinates_to_indeces(self.position)
+        coordinates = []
+        if self.color == Color.WHITE:
+            op = add
+        else:
+            op = sub
+        # Check front moves
+        if self.firstMove and not board.matrix[op(i, 2)][j]:
+            coordinates.append(board.indeces_to_coordinates(op(i, 2), j))
+        if self.inside_board(op(i, 1), j) and not board.matrix[op(i, 1)][j]:
+            coordinates.append(board.indeces_to_coordinates(op(i, 1), j))
+        # Check Left Diagonal
+        if self.inside_board(op(i, 1), j - 1) and board.matrix[op(i, 1)][j - 1]:
+            if board.matrix[op(i, 1)][j - 1].color != self.color:
+                coordinates.append(board.indeces_to_coordinates(op(i, 1), j - 1))
+        # Check Right Diagonal
+        if self.inside_board(op(i, 1), j + 1) and board.matrix[op(i, 1)][j + 1]:
+            if board.matrix[op(i, 1)][j + 1].color != self.color:
+                coordinates.append(board.indeces_to_coordinates(op(i, 1), j + 1))
+        return coordinates
 
 
 class Rook(Piece):
