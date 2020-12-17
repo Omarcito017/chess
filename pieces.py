@@ -1,19 +1,23 @@
 from color import Color
+from board import Board
 from abc import ABC
 
 
 class Piece(ABC):
-    def __init__(self, color: Color, row: str, column: str):
+    def __init__(self, color: Color, position: str):
         self.color = color
-        self.position = (row, column)
+        self.position = position
         self.firstMove = True
 
     def valid_moves(self, board):
         pass
 
+    def inside_board(self, i: int, j: int):
+        return 0 < i < 8 and 0 < j < 8
+
 
 class Pawn(Piece):
-    def valid_moves(self):
+    def valid_moves(self, board: Board):
         pass
 
 
