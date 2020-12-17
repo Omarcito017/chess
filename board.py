@@ -64,6 +64,7 @@ class Board:
 
         def sub(a, b):
             return a - b
+
         # Integer values to index the matrix
         i, j = self.coordinates_to_indeces(position)
         coordinates = []
