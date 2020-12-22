@@ -40,7 +40,7 @@ class Board:
         column = self.columns[pos[0]]
         self.matrix[row][column] = item
 
-    def inside_board(self, i: int, j: int):
+    def inside_board(self, i: int, j: int) -> bool:
         return 0 <= i < 8 and 0 <= j < 8
 
     def indeces_to_coordinates(self, i: int, j: int) -> str:
