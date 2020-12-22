@@ -6,7 +6,7 @@ from game import Game
 def test_indices_to_coordinates():
     state = Game()
     i, j = 6, 3
-    result = state.board.indeces_to_coordinates(i, j)
+    result = state.board.idxs_to_coordinates(i, j)
     print(result)
     assert result == "E7"
 
@@ -21,11 +21,14 @@ def test_forward():
         assert col + str(5) in result
 
 
-def test_diagonal():
+def test_front_and_diagonal():
     state = Game()
     rook = state.board["H1"]
     state.board["G6"] = rook
     result1 = state.board.valid_moves("F7")
     result2 = state.board.valid_moves("H7")
+    assert len(result1) == 3 and len(result2) == 3
     assert "G6" in result1
     assert "G6" in result2
+    assert "F6" in result1 and "H6" in result2
+    assert "F5" in result1 and "H5" in result2
