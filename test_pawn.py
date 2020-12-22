@@ -7,7 +7,6 @@ def test_indices_to_coordinates():
     state = Game()
     i, j = 6, 3
     result = state.board.idxs_to_coordinates(i, j)
-    print(result)
     assert result == "E7"
 
 
