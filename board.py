@@ -6,7 +6,7 @@ class Board:
     def __init__(self):
         self.matrix = [[None for i in range(8)] for j in range(8)]
         self.columns = {"A": 7, "B": 6, "C": 5, "D": 4, "E": 3, "F": 2, "G": 1, "H": 0}
-        self.inv_col = {7: "A", 6: "B", 5: "C", 4: "D", 3: "E", 2: "F", 1: "G", 0: "H"}
+        self.inv_col = {v:k  for k,v in self.columns}
 
     def initialize_pieces(self, color: Color):
         if color == Color.WHITE:
