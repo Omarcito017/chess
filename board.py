@@ -49,7 +49,7 @@ class Board:
         print(col + row)
         return col + row
 
-    def coordinates_to_indeces(self, coord: str) -> tuple:
+    def coordinates_to_idxs(self, coord: str) -> Tuple[int, int]:
         i, j = int(coord[1]) - 1, self.columns[coord[0]]
         return (i, j)
 
