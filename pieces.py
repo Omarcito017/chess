@@ -3,40 +3,30 @@ from abc import ABC
 
 
 class Piece(ABC):
-    def __init__(self, color: Color, row: str, column: str):
+    def __init__(self, color: Color):
         self.color = color
-        self.position = (row, column)
         self.firstMove = True
-
-    def valid_moves(self):
-        pass
 
 
 class Pawn(Piece):
-    def valid_moves(self):
-        pass
+    pass
 
 
 class Rook(Piece):
-    def valid_moves(self):
-        pass
+    pass
 
 
 class Knight(Piece):
-    def valid_moves(self):
-        pass
+    pass
 
 
 class Bishop(Piece):
-    def valid_moves(self):
-        pass
+    pass
 
 
 class Queen(Piece):
-    def valid_moves(self):
-        pass
+    pass
 
 
 class King(Piece):
-    def valid_moves(self):
-        pass
+    pass
