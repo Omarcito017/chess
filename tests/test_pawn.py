@@ -1,12 +1,12 @@
-from game import Game
+from chess.game import Game
 
 """Pawn Moves Test"""
 
 
-def test_indices_to_coordinates():
+def test_indices_to_position():
     state = Game()
     i, j = 6, 3
-    result = state.board.idxs_to_coordinates(i, j)
+    result = state.board.idxs_to_position(i, j)
     assert result == "E7"
 
 

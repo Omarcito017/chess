@@ -2,8 +2,9 @@ install:
 	pip install -r requirements.txt
 
 test:
-	pytest
+	python -m pytest tests
 
 lint:
 	black .
 	flake8
+	isort .

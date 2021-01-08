@@ -4,6 +4,6 @@ python:
 install:
   - make install
 script:
-  - PYTHONPATH=. pytest
+  - PYTHONPATH=. python -m pytest tests
   - PYTHONPATH=. black --check
   - PYTHONPATH=. flake8
